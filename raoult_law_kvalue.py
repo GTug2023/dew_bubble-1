@@ -32,7 +32,7 @@ def raoult_law_kvalue( T, P, a, *gamma):
     ns,nc = a.shape
     # makes np array of zeros
     K = np.zeros(ns) 
-    Ps = antoine(a, T)  
+    Ps = antoine(a, T)    # Ps implies Saturated Vapor Pressure and calculated using the Antoine's equation. 
     K = Ps/P
     if gamma:
         K *= gamma
